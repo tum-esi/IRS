@@ -1,0 +1,13 @@
+tornado>=6.0.4
+simplejson>=3.17.2
+requests>=2.24.0
+celery>=5.0.2
+pymongo>=3.11.3
+pika>=1.1.0
+
+
+# bson>=0.5.10
+# tornado-celery>=0.3.5
+# celery[redis]>=5.0.2
+# redis>=3.5.3
+

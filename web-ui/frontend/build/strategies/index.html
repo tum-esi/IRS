@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/tum.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/w3.css">
+
+		
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-452834a3.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-93ccf99f.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-27a9a25a.js">
+		<link rel="modulepreload" href="/./_app/pages/strategies/index.svelte-64eaacbe.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-c747952b.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/strategies/index.svelte-5c90ff62.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-452834a3.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-27a9a25a.js"),
+						import("/./_app/pages/strategies/index.svelte-64eaacbe.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/strategies",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<header><div class="w3-bar w3-blue"><a href="/" class="w3-bar-item w3-button svelte-1xp7w9o">Home</a>
+<a href="/strategies" class="w3-bar-item w3-button w3-hide-small svelte-1xp7w9o active">Strategies</a>
+<a href="/database" class="w3-bar-item w3-button w3-hide-small svelte-1xp7w9o">Database</a>
+<a href="http://localhost:15672/" class="w3-bar-item w3-button w3-hide-small">Rabbit Broker</a>
+<a href="http://localhost:5000/doc" class="w3-bar-item w3-button w3-hide-small">Swagger API</a>
+<button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium">☰</button></div>
+
+	<div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium"><a href="/" class="w3-bar-item w3-button svelte-1xp7w9o">Home</a>
+<a href="/strategies" class="w3-bar-item w3-button svelte-1xp7w9o active">Strategies</a>
+<a href="/database" class="w3-bar-item w3-button svelte-1xp7w9o">Database</a>
+<a href="http://localhost:15672/" class="w3-bar-item w3-button">Rabbit Broker</a>
+<a href="http://localhost:5000/doc" class="w3-bar-item w3-button">Swagger API</a></div>
+</header>
+
+<main class="svelte-1izrdc8">
+	
+	
+	
+
+
+<hr class="svelte-vxxu2t">
+
+<div class="w3-panel w3-blue svelte-vxxu2t"><h1 class="w3-text-yellow svelte-vxxu2t" style="text-shadow:1px 1px 0 #444"><b class="svelte-vxxu2t">Activity Status</b></h1></div>
+
+
+<div class="container activity svelte-vxxu2t"><div class="led-box svelte-vxxu2t"><div class="led-green2 svelte-vxxu2t"></div>
+	    </div>
+
+	<div class="led-box svelte-vxxu2t"><div class="led-red2 svelte-vxxu2t"></div>
+	    </div></div>
+
+<br class="svelte-vxxu2t">
+
+<hr class="svelte-vxxu2t">
+
+<div class="w3-panel w3-blue svelte-vxxu2t"><h1 class="w3-text-yellow svelte-vxxu2t" style="text-shadow:1px 1px 0 #444"><b class="svelte-vxxu2t">Monitorig of Active Responses</b></h1></div>
+
+
+
+
+<div class="w3-center svelte-vxxu2t"><div class="svelte-vxxu2t">&quot;Active Response Strategies&quot;</div></div>
+
+<hr class="svelte-vxxu2t">
+<div class="w3-panel w3-blue svelte-vxxu2t"><h1 class="w3-text-yellow svelte-vxxu2t" style="text-shadow:1px 1px 0 #444"><b class="svelte-vxxu2t">Manual Response Strategies</b></h1></div>
+
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Possible Manual Response Strategies:</p></div>
+    <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">add (default), manual_task, manual_task2, notify</p></div></div>
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-half svelte-vxxu2t"><input class="w3-input w3-border svelte-vxxu2t" type="text" placeholder="task_name"></div>
+    <div class="w3-half svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Execute Manual Response</button></div></div>
+
+<br class="svelte-vxxu2t">
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-half svelte-vxxu2t"><input class="w3-input w3-border svelte-vxxu2t" type="text" placeholder="00000000-0000-0000-0000-000000000000"></div>
+    <div class="w3-half svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Revoke Response</button></div></div>
+
+
+
+<hr class="svelte-vxxu2t">
+<div class="w3-panel w3-blue svelte-vxxu2t"><h1 class="w3-text-yellow svelte-vxxu2t" style="text-shadow:1px 1px 0 #444"><b class="svelte-vxxu2t">Automatic Response Strategies</b></h1></div>
+
+
+<div class="w3-gray svelte-vxxu2t"><div class="w3-container svelte-vxxu2t"><div class="w3-row w3-section svelte-vxxu2t"><div class="w3-half svelte-vxxu2t"><input class="w3-input w3-border svelte-vxxu2t" type="number"></div>
+  <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Number of Messages to Publish</p></div></div>
+
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-half svelte-vxxu2t"><select class="w3-input w3-border svelte-vxxu2t"><option selected value="security_incident" class="svelte-vxxu2t">security_incident</option></select></div>
+  <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">RabbitMQ Channel</p></div></div>
+
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-half svelte-vxxu2t"><textarea class="textarea w3-input w3-border svelte-vxxu2t" placeholder="JSON Data" type="text"></textarea></div>
+  <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Security Incident Data</p></div></div>
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-quarter svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Pretty Print</button></div>
+  <div class="w3-quarter svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Clear</button></div>
+  <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Helpers</p></div></div>
+
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-quarter svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Sample 1</button></div>
+  <div class="w3-quarter svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Sample 2</button></div>
+  <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Sample Attack Incidents</p></div></div>
+
+<div class="w3-row w3-section svelte-vxxu2t"><div class="w3-quarter svelte-vxxu2t"><button class="w3-col w3-input w3-border svelte-vxxu2t">Get Sizes</button></div>
+  <div class="w3-quarter w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Bytes: 0, kB: 0, MB 0</p></div>
+  <div class="w3-half w3-center svelte-vxxu2t"><p class="svelte-vxxu2t">Attack Incident Data Size</p></div></div>
+
+<div class="w3-row w3-section svelte-vxxu2t"><button class="w3-col w3-button w3-border w3-yellow svelte-vxxu2t">Submit</button></div></div></div>
+
+
+
+
+
+<hr class="svelte-vxxu2t">
+<div class="w3-panel w3-blue svelte-vxxu2t"><h1 class="w3-text-yellow svelte-vxxu2t" style="text-shadow:1px 1px 0 #444"><b class="svelte-vxxu2t">Event Logs</b></h1></div>
+
+
+<button class="w3-col w3-input w3-border svelte-vxxu2t">Clear Events</button>
+
+<ul class="svelte-vxxu2t"><li class="svelte-vxxu2t">event1
+</li><li class="svelte-vxxu2t">event2
+</li><li class="svelte-vxxu2t">event3
+</li></ul>
+
+<br class="svelte-vxxu2t">
+
+<hr class="svelte-vxxu2t">
+<div class="w3-panel w3-blue svelte-vxxu2t"><h1 class="w3-text-yellow svelte-vxxu2t" style="text-shadow:1px 1px 0 #444"><b class="svelte-vxxu2t">Timing Results</b></h1></div>
+</main>
+
+<footer class="svelte-1izrdc8"><p>If there are question, please contact <a href="https://www.ei.tum.de/esi/mitarbeiter/lauinger/" class="svelte-1izrdc8">TUM</a>.</p>
+</footer>
+
+
+
+	
+</div>
+	</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/tum.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/w3.css">
+
+		
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-452834a3.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-93ccf99f.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-27a9a25a.js">
+		<link rel="modulepreload" href="/./_app/pages/incidents/index.svelte-18e3c3c6.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-c747952b.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-452834a3.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-27a9a25a.js"),
+						import("/./_app/pages/incidents/index.svelte-18e3c3c6.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/incidents",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<header><div class="w3-bar w3-blue"><a href="/" class="w3-bar-item w3-button svelte-1xp7w9o">Home</a>
+<a href="/strategies" class="w3-bar-item w3-button w3-hide-small svelte-1xp7w9o">Strategies</a>
+<a href="/database" class="w3-bar-item w3-button w3-hide-small svelte-1xp7w9o">Database</a>
+<a href="http://localhost:15672/" class="w3-bar-item w3-button w3-hide-small">Rabbit Broker</a>
+<a href="http://localhost:5000/doc" class="w3-bar-item w3-button w3-hide-small">Swagger API</a>
+<button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium">☰</button></div>
+
+	<div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium"><a href="/" class="w3-bar-item w3-button svelte-1xp7w9o">Home</a>
+<a href="/strategies" class="w3-bar-item w3-button svelte-1xp7w9o">Strategies</a>
+<a href="/database" class="w3-bar-item w3-button svelte-1xp7w9o">Database</a>
+<a href="http://localhost:15672/" class="w3-bar-item w3-button">Rabbit Broker</a>
+<a href="http://localhost:5000/doc" class="w3-bar-item w3-button">Swagger API</a></div>
+</header>
+
+<main class="svelte-1izrdc8"><h3>Messages</h3>
+
+<p>{
+  &quot;uuid&quot;: &quot;&quot;,
+  &quot;type&quot;: &quot;&quot;,
+  &quot;taxonomy&quot;: [],
+  &quot;timestamp_started&quot;: &quot;&quot;,
+  &quot;timestamp_ended&quot;: &quot;&quot;,
+  &quot;severity&quot;: &quot;&quot;,
+  &quot;sources&quot;: [
+    {}
+  ],
+  &quot;targets&quot;: [
+    {
+      &quot;ip&quot;: &quot;&quot;,
+      &quot;uuid&quot;: &quot;&quot;
+    }
+  ],
+  &quot;possible_targets&quot;: [
+    {
+      &quot;ip&quot;: &quot;&quot;,
+      &quot;uuid&quot;: &quot;&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;&quot;,
+      &quot;uuid&quot;: &quot;&quot;
+    }
+  ]
+}</p>
+<p>{
+  &quot;uuid&quot;: &quot;793b8add-184d-489b-8f30-39527fe7f3b7&quot;,
+  &quot;type&quot;: &quot;DDOS attack&quot;,
+  &quot;taxonomy&quot;: [
+    &quot;infrastructure layer&quot;,
+    &quot;SYN flood&quot;,
+    &quot;TCP&quot;
+  ],
+  &quot;timestamp_started&quot;: &quot;2020-09-03 00:43:35.520&quot;,
+  &quot;timestamp_ended&quot;: &quot;2020-09-03 03:17:21.116&quot;,
+  &quot;severity&quot;: &quot;5&quot;,
+  &quot;sources&quot;: [
+    {
+      &quot;ip&quot;: &quot;6.139.209.173&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;43.118.92.222&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;122.45.38.175&quot;
+    }
+  ],
+  &quot;targets&quot;: [
+    {
+      &quot;ip&quot;: &quot;172.17.0.5&quot;,
+      &quot;uuid&quot;: &quot;588e188c-5c0d-11eb-ae93-0242ac130002&quot;
+    }
+  ],
+  &quot;possible_targets&quot;: [
+    {
+      &quot;ip&quot;: &quot;172.17.0.7&quot;,
+      &quot;uuid&quot;: &quot;4d394c0e-5c0d-11eb-ae93-0242ac130002&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;172.17.0.8&quot;,
+      &quot;uuid&quot;: &quot;a5f68186-5c0d-11eb-ae93-0242ac130002&quot;
+    }
+  ]
+}</p>
+<p>{
+  &quot;uuid&quot;: &quot;5f5aee7f-3899-4218-b887-acba844e2fa4&quot;,
+  &quot;type&quot;: &quot;MITM attack&quot;,
+  &quot;taxonomy&quot;: [
+    &quot;false message attack&quot;
+  ],
+  &quot;timestamp_started&quot;: &quot;2020-09-07 08:25:14.014&quot;,
+  &quot;timestamp_ended&quot;: &quot;2020-09-07 08:26:01.005&quot;,
+  &quot;severity&quot;: &quot;5&quot;,
+  &quot;sources&quot;: [],
+  &quot;targets&quot;: [
+    {
+      &quot;ip&quot;: &quot;172.17.0.5&quot;,
+      &quot;uuid&quot;: &quot;588e188c-5c0d-11eb-ae93-0242ac130002&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;172.17.0.7&quot;,
+      &quot;uuid&quot;: &quot;4d394c0e-5c0d-11eb-ae93-0242ac130002&quot;
+    }
+  ],
+  &quot;possible_targets&quot;: [
+    {
+      &quot;ip&quot;: &quot;172.17.0.3&quot;,
+      &quot;uuid&quot;: &quot;085f2ee2-6f92-4a71-94ef-8b96ff5faa15&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;172.17.0.6&quot;,
+      &quot;uuid&quot;: &quot;364afd20-e18b-4a43-b281-162543fb95c3&quot;
+    },
+    {
+      &quot;ip&quot;: &quot;172.17.0.8&quot;,
+      &quot;uuid&quot;: &quot;a5f68186-5c0d-11eb-ae93-0242ac130002&quot;
+    }
+  ]
+}</p>
+<p>{
+    &quot;uuid&quot;: &quot;&quot;,
+    &quot;event_type&quot;: &quot;&quot;,
+    &quot;niove_module&quot;: &quot;&quot;,
+    &quot;response&quot;: {
+        &quot;type&quot;: &quot;&quot;,
+        &quot;target&quot;: &quot;&quot;
+    },
+    &quot;state&quot;: &quot;&quot;
+}</p>
+<p>{
+    &quot;uuid&quot;: &quot;793b8add-184d-489b-8f30-39527fe7f3b7&quot;,
+    &quot;event_type&quot;: &quot;notification&quot;,
+    &quot;niove_module&quot;: &quot;response-toolkit&quot;,
+    &quot;response&quot;: null,
+    &quot;state&quot;: &quot;preprocessing&quot;
+}</p>
+<p>{
+    &quot;uuid&quot;: &quot;793b8add-184d-489b-8f30-39527fe7f3b7&quot;,
+    &quot;event_type&quot;: &quot;process&quot;,
+    &quot;niove_module&quot;: &quot;response-toolkit&quot;,
+    &quot;response&quot;: {
+        &quot;type&quot;: &quot;static&quot;,
+        &quot;target&quot;: &quot;172.18.0.9&quot;
+    },
+    &quot;state&quot;: &quot;succeeded&quot;
+}</p></main>
+
+<footer class="svelte-1izrdc8"><p>If there are question, please contact <a href="https://www.ei.tum.de/esi/mitarbeiter/lauinger/" class="svelte-1izrdc8">TUM</a>.</p>
+</footer>
+
+
+
+	
+</div>
+	</body>
+</html>

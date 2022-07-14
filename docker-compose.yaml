@@ -1,0 +1,68 @@
+version: '3'
+services:
+  
+  rabbitmq:
+    # image: rabbitmq:latest
+    build:
+      context: ./rabbit-docker
+    ports:
+      # The standard AMQP protocol port
+      - "5672:5672"
+      # HTTP management UI
+      - "15672:15672"
+    networks:
+      - network
+
+  # redis:
+  #   image: redis:latest
+  #   ports:
+  #     - '6379:6379'
+  #   networks:
+  #     - network
+
+  response-agent:
+    build: ./response-agent
+    ports:
+      - "8888:8888" # manual HTTP calls
+    networks:
+      - network
+
+  response-toolkit:
+    build: ./response-toolkit
+    ports:
+      - "5000:5000" # manual HTTP calls
+    depends_on:
+      - rabbitmq
+      - mongodb
+    networks:
+      - network
+
+  mongodb:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: password
+    # volumes:
+    #   - "./mongo-db:/data/db"
+    networks:
+      - network
+
+  web-ui:
+    build: ./web-ui
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./web-ui/svelte-frontend/public/:/tornado/svelte-frontend/public/
+    #   - "/var/run/docker.sock:/var/run/docker.sock"
+    depends_on:
+      - rabbitmq
+      - mongodb
+      - response-toolkit
+    networks:
+      - network
+
+networks:
+  # Declare our private network.  We must declare one for the magic
+  # Docker DNS to work, but otherwise its default settings are fine.
+  network: {}

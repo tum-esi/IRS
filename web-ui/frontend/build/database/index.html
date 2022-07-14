@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/tum.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="/w3.css">
+
+		
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-452834a3.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-93ccf99f.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-27a9a25a.js">
+		<link rel="modulepreload" href="/./_app/pages/database/index.svelte-09a271b7.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-c747952b.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/database/index.svelte-fccadef5.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-452834a3.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-27a9a25a.js"),
+						import("/./_app/pages/database/index.svelte-09a271b7.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/database",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+<header><div class="w3-bar w3-blue"><a href="/" class="w3-bar-item w3-button svelte-1xp7w9o">Home</a>
+<a href="/strategies" class="w3-bar-item w3-button w3-hide-small svelte-1xp7w9o">Strategies</a>
+<a href="/database" class="w3-bar-item w3-button w3-hide-small svelte-1xp7w9o active">Database</a>
+<a href="http://localhost:15672/" class="w3-bar-item w3-button w3-hide-small">Rabbit Broker</a>
+<a href="http://localhost:5000/doc" class="w3-bar-item w3-button w3-hide-small">Swagger API</a>
+<button class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium">☰</button></div>
+
+	<div id="demo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium"><a href="/" class="w3-bar-item w3-button svelte-1xp7w9o">Home</a>
+<a href="/strategies" class="w3-bar-item w3-button svelte-1xp7w9o">Strategies</a>
+<a href="/database" class="w3-bar-item w3-button svelte-1xp7w9o active">Database</a>
+<a href="http://localhost:15672/" class="w3-bar-item w3-button">Rabbit Broker</a>
+<a href="http://localhost:5000/doc" class="w3-bar-item w3-button">Swagger API</a></div>
+</header>
+
+<main class="svelte-1izrdc8"><hr class="svelte-i1k9h1">
+
+<div class="w3-panel w3-blue"><h1 class="w3-text-yellow" style="text-shadow:1px 1px 0 #444"><b>Databases and Collections</b></h1></div>
+
+
+<button class="w3-col w3-input w3-border">DBs and Collections</button>
+
+<br>
+
+
+
+<hr class="svelte-i1k9h1">
+
+<div class="w3-panel w3-blue"><h1 class="w3-text-yellow" style="text-shadow:1px 1px 0 #444"><b>Collection Data</b></h1></div>
+
+
+<div class="w3-row w3-section"><div class="w3-third">
+        <input class="w3-input w3-border" type="text" placeholder="collection_name"></div>
+    <div class="w3-third"><button class="w3-col w3-input w3-border">Get Data</button></div>
+    <div class="w3-rest"><button class="w3-col w3-input w3-border">Clear Data</button></div></div>
+
+<ul>
+</ul></main>
+
+<footer class="svelte-1izrdc8"><p>If there are question, please contact <a href="https://www.ei.tum.de/esi/mitarbeiter/lauinger/" class="svelte-1izrdc8">TUM</a>.</p>
+</footer>
+
+
+
+	
+</div>
+	</body>
+</html>
