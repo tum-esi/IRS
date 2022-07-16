@@ -1,18 +1,18 @@
-## Intrusion Response Toolkit
+## Intrusion Response System for Connected Vehicles
 
-to see how the toolkit is being used, either watch the video provided in the root folder of this repository or read and test the documentation below.
+to see how the system is being used, either watch the video provided in the root folder of this repository or read and test the documentation below.
 
-- start toolkit by jumping into the root folder and executing `docker-compose up`
-- connect to the frontend of the toolkit by using the browser and the url `localhost:5001`
+- start system by jumping into the root folder and executing `docker-compose up`
+- connect to the frontend of the system by using the browser and the url `localhost:5001`
 - to connect to the rabbitMQ, use the tab of the frontend and login with the credentials `user` and `password`
 - in the rabbit UI, you can inspect all connections, queues, channels, exchanges, etc.
 - the swagger API is reachable via another UI tab but is kept at a minimum description
-- to use the toolkit:
+- to use the system:
 		- NOTIFY TASK: 
 			- for running the task notify, write `notify` into the manual response strategy field and hit `Execute Manual Response`
 			- next go to the database tab and copy the job collection name and past it into the string field below and click `get data`, this shows successfull invocations of notify.
 		- MANUAL TASK:
-			- sends data to the response toolkit, write `manual_task` into the manual task field. the action fails if the response toolkit is offline.
+			- sends data to the response manager, write `manual_task` into the manual task field. the action fails if the response manager is offline.
 		- REVOCATION OF TASK:
 			- start a the manual task by writing `add` into the field. above in the monitoring of active response, you can see the job id. the add task runs for 15 seconds and is executed by a celery worker. to revoke the task, simply copy paste the job ID of the task into the revocation field in under manual response.
 		- AUTOMATED RESPONSE:
@@ -21,7 +21,7 @@ to see how the toolkit is being used, either watch the video provided in the roo
 			- the output is visible in the event logs section below.
 
 - possible tasks are: manual_task, notify, automated_task, add2, add, 
-- other tasks can be added in the response-toolkit folder under the file `tasks.py`
+- other tasks can be added in the response-manager folder under the file `tasks.py`
 
 ## docker connection string
 
